@@ -7,5 +7,6 @@ namespace AnkoperMuzikDans.Models
     public class deneme
     {
         public int Type { get; set; }
+        public string MehmetUgrAdam { get; set; }
     }
 }
