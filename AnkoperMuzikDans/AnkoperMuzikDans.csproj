@@ -1,4 +1,5 @@
 ﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -43,6 +44,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -94,83 +101,19 @@
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
-    <Content Include="Tema\.gitignore" />
-    <Content Include="Tema\css\agency.css" />
-    <Content Include="Tema\css\agency.min.css" />
-    <Content Include="Tema\gulpfile.js" />
-    <Content Include="Tema\img\about\1.jpg" />
-    <Content Include="Tema\img\about\2.jpg" />
-    <Content Include="Tema\img\about\3.jpg" />
-    <Content Include="Tema\img\about\4.jpg" />
-    <Content Include="Tema\img\header-bg.jpg" />
-    <Content Include="Tema\img\logos\creative-market.jpg" />
-    <Content Include="Tema\img\logos\designmodo.jpg" />
-    <Content Include="Tema\img\logos\envato.jpg" />
-    <Content Include="Tema\img\logos\themeforest.jpg" />
-    <Content Include="Tema\img\map-image.png" />
-    <Content Include="Tema\img\portfolio\01-full.jpg" />
-    <Content Include="Tema\img\portfolio\01-thumbnail.jpg" />
-    <Content Include="Tema\img\portfolio\02-full.jpg" />
-    <Content Include="Tema\img\portfolio\02-thumbnail.jpg" />
-    <Content Include="Tema\img\portfolio\03-full.jpg" />
-    <Content Include="Tema\img\portfolio\03-thumbnail.jpg" />
-    <Content Include="Tema\img\portfolio\04-full.jpg" />
-    <Content Include="Tema\img\portfolio\04-thumbnail.jpg" />
-    <Content Include="Tema\img\portfolio\05-full.jpg" />
-    <Content Include="Tema\img\portfolio\05-thumbnail.jpg" />
-    <Content Include="Tema\img\portfolio\06-full.jpg" />
-    <Content Include="Tema\img\portfolio\06-thumbnail.jpg" />
-    <Content Include="Tema\img\team\1.jpg" />
-    <Content Include="Tema\img\team\2.jpg" />
-    <Content Include="Tema\img\team\3.jpg" />
-    <Content Include="Tema\index.html" />
-    <Content Include="Tema\js\agency.js" />
-    <Content Include="Tema\js\agency.min.js" />
-    <Content Include="Tema\js\contact_me.js" />
-    <Content Include="Tema\js\jqBootstrapValidation.js" />
-    <Content Include="Tema\mail\contact_me.php" />
-    <Content Include="Tema\vendor\bootstrap\css\bootstrap-grid.css" />
-    <Content Include="Tema\vendor\bootstrap\css\bootstrap-grid.min.css" />
-    <Content Include="Tema\vendor\bootstrap\css\bootstrap-reboot.css" />
-    <Content Include="Tema\vendor\bootstrap\css\bootstrap-reboot.min.css" />
-    <Content Include="Tema\vendor\bootstrap\css\bootstrap.css" />
-    <Content Include="Tema\vendor\bootstrap\css\bootstrap.min.css" />
-    <Content Include="Tema\vendor\bootstrap\js\bootstrap.bundle.js" />
-    <Content Include="Tema\vendor\bootstrap\js\bootstrap.bundle.min.js" />
-    <Content Include="Tema\vendor\bootstrap\js\bootstrap.js" />
-    <Content Include="Tema\vendor\bootstrap\js\bootstrap.min.js" />
-    <Content Include="Tema\vendor\fontawesome-free\css\all.css" />
-    <Content Include="Tema\vendor\fontawesome-free\css\all.min.css" />
-    <Content Include="Tema\vendor\fontawesome-free\css\brands.css" />
-    <Content Include="Tema\vendor\fontawesome-free\css\brands.min.css" />
-    <Content Include="Tema\vendor\fontawesome-free\css\fontawesome.css" />
-    <Content Include="Tema\vendor\fontawesome-free\css\fontawesome.min.css" />
-    <Content Include="Tema\vendor\fontawesome-free\css\regular.css" />
-    <Content Include="Tema\vendor\fontawesome-free\css\regular.min.css" />
-    <Content Include="Tema\vendor\fontawesome-free\css\solid.css" />
-    <Content Include="Tema\vendor\fontawesome-free\css\solid.min.css" />
-    <Content Include="Tema\vendor\fontawesome-free\css\svg-with-js.css" />
-    <Content Include="Tema\vendor\fontawesome-free\css\svg-with-js.min.css" />
-    <Content Include="Tema\vendor\fontawesome-free\css\v4-shims.css" />
-    <Content Include="Tema\vendor\fontawesome-free\css\v4-shims.min.css" />
-    <Content Include="Tema\vendor\fontawesome-free\webfonts\fa-brands-400.svg" />
-    <Content Include="Tema\vendor\fontawesome-free\webfonts\fa-regular-400.svg" />
-    <Content Include="Tema\vendor\fontawesome-free\webfonts\fa-solid-900.svg" />
-    <Content Include="Tema\vendor\jquery-easing\jquery.easing.compatibility.js" />
-    <Content Include="Tema\vendor\jquery-easing\jquery.easing.js" />
-    <Content Include="Tema\vendor\jquery-easing\jquery.easing.min.js" />
-    <Content Include="Tema\vendor\jquery\jquery.js" />
-    <Content Include="Tema\vendor\jquery\jquery.min.js" />
-    <Content Include="Tema\vendor\jquery\jquery.slim.js" />
-    <Content Include="Tema\vendor\jquery\jquery.slim.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Entity\DataContext.cs" />
+    <Compile Include="Entity\DataInitilializer.cs" />
+    <Compile Include="Entity\Image.cs" />
+    <Compile Include="Entity\Instructor.cs" />
+    <Compile Include="Entity\Instrument.cs" />
+    <Compile Include="Entity\Lecture.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\deneme.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -178,49 +121,6 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
-    <Content Include="Tema\.browserslistrc" />
-    <Content Include="Tema\.travis.yml" />
-    <Content Include="Tema\LICENSE" />
-    <Content Include="Tema\package-lock.json" />
-    <Content Include="Tema\package.json" />
-    <Content Include="Tema\README.md" />
-    <Content Include="Tema\scss\agency.scss" />
-    <Content Include="Tema\scss\base\_mixins.scss" />
-    <Content Include="Tema\scss\base\_page.scss" />
-    <Content Include="Tema\scss\base\_variables.scss" />
-    <Content Include="Tema\scss\components\_buttons.scss" />
-    <Content Include="Tema\scss\components\_navbar.scss" />
-    <Content Include="Tema\scss\layout\_contact.scss" />
-    <Content Include="Tema\scss\layout\_footer.scss" />
-    <Content Include="Tema\scss\layout\_masthead.scss" />
-    <Content Include="Tema\scss\layout\_portfolio.scss" />
-    <Content Include="Tema\scss\layout\_services.scss" />
-    <Content Include="Tema\scss\layout\_team.scss" />
-    <Content Include="Tema\scss\layout\_timeline.scss" />
-    <Content Include="Tema\vendor\bootstrap\css\bootstrap-grid.css.map" />
-    <Content Include="Tema\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
-    <Content Include="Tema\vendor\bootstrap\css\bootstrap-reboot.css.map" />
-    <Content Include="Tema\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
-    <Content Include="Tema\vendor\bootstrap\css\bootstrap.css.map" />
-    <Content Include="Tema\vendor\bootstrap\css\bootstrap.min.css.map" />
-    <Content Include="Tema\vendor\bootstrap\js\bootstrap.bundle.js.map" />
-    <Content Include="Tema\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
-    <Content Include="Tema\vendor\bootstrap\js\bootstrap.js.map" />
-    <Content Include="Tema\vendor\bootstrap\js\bootstrap.min.js.map" />
-    <Content Include="Tema\vendor\fontawesome-free\webfonts\fa-brands-400.eot" />
-    <Content Include="Tema\vendor\fontawesome-free\webfonts\fa-brands-400.ttf" />
-    <Content Include="Tema\vendor\fontawesome-free\webfonts\fa-brands-400.woff" />
-    <Content Include="Tema\vendor\fontawesome-free\webfonts\fa-brands-400.woff2" />
-    <Content Include="Tema\vendor\fontawesome-free\webfonts\fa-regular-400.eot" />
-    <Content Include="Tema\vendor\fontawesome-free\webfonts\fa-regular-400.ttf" />
-    <Content Include="Tema\vendor\fontawesome-free\webfonts\fa-regular-400.woff" />
-    <Content Include="Tema\vendor\fontawesome-free\webfonts\fa-regular-400.woff2" />
-    <Content Include="Tema\vendor\fontawesome-free\webfonts\fa-solid-900.eot" />
-    <Content Include="Tema\vendor\fontawesome-free\webfonts\fa-solid-900.ttf" />
-    <Content Include="Tema\vendor\fontawesome-free\webfonts\fa-solid-900.woff" />
-    <Content Include="Tema\vendor\fontawesome-free\webfonts\fa-solid-900.woff2" />
-    <Content Include="Tema\vendor\jquery\jquery.min.map" />
-    <Content Include="Tema\vendor\jquery\jquery.slim.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -231,6 +131,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -262,7 +163,10 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.targets'))" />
   </Target>
+  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
