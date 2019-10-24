@@ -57,6 +57,7 @@ namespace AnkoperMuzikDans.Entity
                 context.Instructors.Add(item);
             }
 
+
             context.SaveChanges();
 
             base.Seed(context);
